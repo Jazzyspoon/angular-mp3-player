@@ -1,0 +1,8 @@
+<div class="row">
+  <ngx-audio-player class="mp3player" [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false"
+    muted="muted" [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions"
+    [displayArtist]="msaapDisplayArtist" [displayDuration]="msaapDisplayDuration" [expanded]="true"
+    [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"
+    [disablePositionSlider]="msaapDisablePositionSlider" (trackEnded)="onEnded()">
+  </ngx-audio-player>
+</div>
