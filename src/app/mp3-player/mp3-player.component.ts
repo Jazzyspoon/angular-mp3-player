@@ -11,7 +11,7 @@ export class Mp3PlayerComponent implements OnInit {
 
   msaapDisplayTitle = true;
   msaapDisplayPlayList = true;
-  msaapPageSizeOptions = [9];
+  msaapPageSizeOptions = [10];
   msaapDisplayVolumeControls = true;
   msaapDisplayRepeatControls = true;
   msaapDisplayArtist = true;
@@ -33,6 +33,12 @@ export class Mp3PlayerComponent implements OnInit {
       duration: 3,
     },
     {
+      title: 'Mario theme',
+      link: 'http://www.jazzyspoon.com/tools/HalloJams/Super%20Mario%20Bros.%20medley.mp3',
+      artist: 'Jazzyspoon',
+      duration: 3,
+    },
+    {
       title: 'Absence',
       link: 'https://jazzyspoon.com/tools/HalloJams/Jazzyspoon%20-%20Hard%20Drive%20Recovery%20-%2006%20Absence%20(20%20mix).mp3',
       artist: 'Jazzyspoon',
@@ -47,6 +53,12 @@ export class Mp3PlayerComponent implements OnInit {
     {
       title: 'Kiddies',
       link: 'https://jazzyspoon.com/tools/HalloJams/KiDdies.mp3',
+      artist: 'Self',
+      duration: 3,
+    },
+    {
+      title: 'Ash and Dust',
+      link: 'http://www.jazzyspoon.com/tools/HalloJams/Jazzyspoon%20-%20Circle%20When%20Finished%20(remastered)%20-%2007%20Ash%20And%20Dust.mp3',
       artist: 'Self',
       duration: 3,
     },
