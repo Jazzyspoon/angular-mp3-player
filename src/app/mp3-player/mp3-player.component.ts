@@ -59,7 +59,7 @@ export class Mp3PlayerComponent implements OnInit {
     {
       title: 'Ash and Dust',
       link: 'http://www.jazzyspoon.com/tools/HalloJams/Jazzyspoon%20-%20Circle%20When%20Finished%20(remastered)%20-%2007%20Ash%20And%20Dust.mp3',
-      artist: 'Self',
+      artist: 'Jazzyspoon',
       duration: 3,
     },
     {
