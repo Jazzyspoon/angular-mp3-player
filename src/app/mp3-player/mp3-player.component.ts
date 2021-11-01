@@ -74,12 +74,6 @@ export class Mp3PlayerComponent implements OnInit {
       artist: 'Jazzyspoon and IG88',
       duration: 3,
     },
-    {
-      title: 'Sleeper',
-      link: 'https://jazzyspoon.com/tools/HalloJams/08%20-%20Sleeper.mp3',
-      artist: 'Yeah Ghost',
-      duration: 3,
-    },
   ];
 
   ngOnInit(): void {}
