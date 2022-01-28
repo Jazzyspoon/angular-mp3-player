@@ -27,6 +27,8 @@
     "follow-redirects": "^1.14.7",
     "jquery": "^3.6.0",
     "json-schema": "^0.4.0",
+    "log4js": "^6.4.1",
+    "nanoid": "^3.2.0",
     "ngx-audio-player": "^11.0.4",
     "node-forge": "^1.2.1",
     "rxjs": "~6.6.0",
