@@ -8,9 +8,8 @@ describe('Mp3PlayerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Mp3PlayerComponent ]
-    })
-    .compileComponents();
+      declarations: [Mp3PlayerComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

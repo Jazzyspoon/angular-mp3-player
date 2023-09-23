@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { NgxAudioPlayerModule } from 'ngx-audio-player';
+import { AudioPlayerModule } from './audio-player/audio-player.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Mp3PlayerComponent } from './mp3-player/mp3-player.component';
 
@@ -14,7 +14,7 @@ import { Mp3PlayerComponent } from './mp3-player/mp3-player.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    NgxAudioPlayerModule,
+    AudioPlayerModule,
     BrowserAnimationsModule,
   ],
   providers: [],
