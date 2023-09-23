@@ -199,3 +199,9 @@ table {
 .mat-mdc-button-base {
   height: 55px;
 }
+.ngx-audio-player {
+  margin: 0;
+}
+.mat-expansion-panel-body {
+  padding: 0;
+}
