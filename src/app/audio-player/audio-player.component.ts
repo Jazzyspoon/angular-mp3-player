@@ -101,8 +101,8 @@ export class AudioPlayerComponent implements OnInit, OnChanges {
   @Input()
   public endOffset = 0;
 
-  currTimePosChanged(event: { value: any }) {
-    this.player.nativeElement.currentTime = event.value;
+  currTimePosChanged(event) {
+    this.player.nativeElement.currentTime = event;
   }
 
   bindPlayerEvent(): void {
