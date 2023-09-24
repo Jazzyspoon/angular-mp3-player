@@ -26,18 +26,6 @@ table {
   width: 100%;
 }
 
-::ng-deep .ngx-audio-player {
-  min-width: 375px;
-}
-
-.mat-expansion-panel {
-  min-width: 375px;
-}
-
-/* mat-slider {
-  max-height: 30px;
-} */
-
 ::ng-deep .mat-paginator-container {
   justify-content: space-between !important;
 }
@@ -204,4 +192,8 @@ table {
 }
 .mat-expansion-panel-body {
   padding: 0;
+}
+.currently-playing {
+  background-color: #f5f5f5;
+  transition: background-color 0.5s ease-in-out;
 }

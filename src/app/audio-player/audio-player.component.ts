@@ -16,7 +16,7 @@ import { AudioPlayerService } from './service/audio-player.service';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'mat-advanced-audio-player,ngx-audio-player',
+  selector: 'mat-advanced-audio-player,audio-player',
   templateUrl: 'audio-player.component.html',
   styleUrls: ['audio-player.component.css'],
 })
@@ -78,9 +78,7 @@ export class AudioPlayerComponent implements OnInit, OnChanges {
 
   @ViewChild('audioPlayer', { static: true }) player: ElementRef;
 
-  iOS =
-    /iPad|iPhone|iPod/.test(navigator.platform) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
   loaderDisplay = false;
   isPlaying = false;
@@ -115,10 +113,6 @@ export class AudioPlayerComponent implements OnInit, OnChanges {
     });
     this.player.nativeElement.addEventListener('timeupdate', () => {
       this.currentTime = Math.floor(this.player.nativeElement.currentTime);
-      // BUG: Commenting for `ended` event not firing #66
-      // if (this.currentTime >= this.duration - this.endOffset) {
-      //     this.player.nativeElement.pause();
-      // }
     });
     this.player.nativeElement.addEventListener('volume', () => {
       this.volume = Math.floor(this.player.nativeElement.volume);

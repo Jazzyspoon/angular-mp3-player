@@ -208,16 +208,18 @@
     <mat-expansion-panel-header>
       {{tableHeader}}
     </mat-expansion-panel-header>
-    <table [dataSource]="dataSource" class="mat-elevation-z6" mat-table>
+    <table [dataSource]="dataSource" class="mat-elevation-z8" style='cursor: pointer;' mat-table>
       <ng-container matColumnDef="title">
-        <th *matHeaderCellDef mat-header-cell>{{titleHeader}}</th>
-        <td (click)="selectTrack(element.index)" *matCellDef="let element" mat-cell>
+        <th *matHeaderCellDef style='font-size: large;' mat-header-cell>{{titleHeader}}</th>
+        <td (click)="selectTrack(element.index)" *matCellDef="let element"
+          [ngClass]="{'currently-playing': tracks[currentIndex]?.title === element.title}" mat-cell>
           {{element.title}}
         </td>
       </ng-container>
       <ng-container matColumnDef="artist">
-        <th *matHeaderCellDef mat-header-cell>{{artistHeader}}</th>
-        <td (click)="selectTrack(element.index)" *matCellDef="let element" mat-cell>
+        <th *matHeaderCellDef style='font-size: large;' mat-header-cell>{{artistHeader}}</th>
+        <td (click)="selectTrack(element.index)" *matCellDef="let element"
+          [ngClass]="{'currently-playing': tracks[currentIndex]?.title === element.title}" mat-cell>
           {{element?.artist ? element?.artist : ''}}
         </td>
       </ng-container>
@@ -229,20 +231,8 @@
       </ng-container>
       <ng-container matColumnDef="status">
         <th *matHeaderCellDef mat-header-cell></th>
-        <td *matCellDef="let element" mat-cell>
-          <div *ngIf="tracks[currentIndex]?.title === element.title">
-            <!-- <mat-icon *ngIf="isPlaying" aria-hidden="true">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                        </mat-icon> -->
-            <mat-icon *ngIf="isPlaying" aria-hidden="true" class="currently-playing">
-              <!-- Play icon (play_arrow) -->
-              <svg height="28" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M12 3v9.28c-.47-.17-.97-.28-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H15V6h4V3h-7z" />
-              </svg>
-            </mat-icon>
-          </div>
+        <td *matCellDef="let element" [ngClass]="{'currently-playing': tracks[currentIndex]?.title === element.title}"
+          mat-cell>
         </td>
       </ng-container>
       <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
