@@ -123,9 +123,10 @@
         </span>
       </div>
       <!-- // aa mat-slider that reacts to the music -->
-      <mat-slider type='range' [disabled]="disablePositionSlider" min="startOffset"
+      <mat-slider type='range' [disabled]="disablePositionSlider" min="startOffset" change="currTimePosChanged($event)"
         class="d-none d-sm-block flex-fill p-1" max="{{duration-endOffset}}" style="width: 100%" value="currentTime">
-        <input [(ngModel)]='currentTime' (ngModelChange)="currTimePosChanged($event)" matSliderThumb>
+        <input [(ngModel)]='currentTime' (ngModelChange)="currTimePosChanged($event)" value="duration-currentTime"
+          matSliderThumb>
       </mat-slider>
       <div class="py-3 px-1" style="font-size: 12px; text-align: right; color: black">
         <span *ngIf="duration !== 0.01">

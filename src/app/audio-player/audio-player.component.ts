@@ -9,7 +9,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { Track } from './model/track.model';
-import { MatSlider } from '@angular/material/slider';
+import { MatSliderModule } from '@angular/material/slider';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { AudioPlayerService } from './service/audio-player.service';
@@ -50,7 +50,7 @@ export class AudioPlayerComponent implements OnInit, OnChanges {
   dataSource = new MatTableDataSource<Track>();
   paginator: MatPaginator;
 
-  timeLineDuration: MatSlider;
+  timeLineDuration: MatSliderModule;
 
   tracks: Track[] = [];
 
