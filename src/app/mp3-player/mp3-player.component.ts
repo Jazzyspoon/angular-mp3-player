@@ -23,61 +23,42 @@ export class Mp3PlayerComponent implements OnInit {
   msaapDisablePositionSlider = false;
   msaapPlaylist: Track[] = [
     // Material Style Advance Audio Player Playlist
-
     {
-      title: 'Detroition',
-      link: 'https://jasonpottorffportfolio.com/music/Jazzyspoon%20-%20Technical%20Failure%20-%2001%20Detroition.mp3',
-      artist: 'Jazzyspoon',
+      title: 'Clarity (Did It Last Cover)',
+      link: 'assets/tracks/Clarity (Did It Last Cover).mp3',
+      artist: 'From Noise to Water',
       duration: 5,
     },
     {
-      title: 'Be My Craft On Wax',
-      link: 'https://jasonpottorffportfolio.com/music/Jazzyspoon%20-%20Technical%20Failure%20-%2002%20Be%20My%20Craft%20On%20Wax.mp3',
-      artist: 'Jazzyspoon',
+      title: 'Nothing New (Young Upstart Cover)',
+      link: 'assets/tracks/Nothing New (Young Upstart Cover).mp3',
+      artist: 'From Noise to Water',
       duration: 5,
     },
     {
-      title: 'Perfect 2020',
-      link: 'https://jasonpottorffportfolio.com/music/Jazzyspoon%20-%20Technical%20Failure%20-%2003%20Perfect%202020%20(modmix).mp3',
-      artist: 'Jazzyspoon',
+      title: 'Reasons To Wait (Water and Fire Cover)',
+      link: 'assets/tracks/Reasons To Wait (Water and Fire Cover).mp3',
+      artist: 'From Noise to Water',
       duration: 5,
     },
     {
-      title: 'Something Blue',
-      link: 'https://jasonpottorffportfolio.com/music/Jazzyspoon%20-%20Technical%20Failure%20-%2004%20Something%20Blue.mp3',
-      artist: 'Jazzyspoon',
+      title: 'Take Me With You (Drama Queen Cover)',
+      link: 'assets/tracks/Take Me With You (Drama Queen Cover).mp3',
+      artist: 'From Noise to Water',
       duration: 5,
     },
     {
-      title: 'Spiritual Processor of 98',
-      link: 'https://jasonpottorffportfolio.com/music/Jazzyspoon%20-%20Technical%20Failure%20-%2005%20Spiritual%20Processor%20of%2098.mp3',
-      artist: 'Jazzyspoon',
+      title: 'Timing Is Everything Else (Glass Feet Cover)',
+      link: 'assets/tracks/Timing Is Everything Else (Glass Feet Cover).mp3',
+      artist: 'From Noise to Water',
       duration: 5,
     },
     {
-      title: 'The Rusting Heart',
-      link: 'https://jasonpottorffportfolio.com/music/Jazzyspoon%20-%20Technical%20Failure%20-%2006%20The%20Rusting%20Heart.mp3',
-      artist: 'Jazzyspoon',
+      title: 'Trying To Be (The Quiet Storm Cover)',
+      link: 'assets/tracks/Trying To Be (The Quiet Storm Cover).mp3',
+      artist: 'From Noise to Water',
       duration: 5,
     },
-    // {
-    //   title: 'Ash and Dust',
-    //   link: 'http://www.jazzyspoon.com/tools/HalloJams/Jazzyspoon%20-%20Circle%20When%20Finished%20(remastered)%20-%2007%20Ash%20And%20Dust.mp3',
-    //   artist: 'Jazzyspoon',
-    //   duration: 3,
-    // },
-    // {
-    //   title: 'Our Whispered Rants',
-    //   link: 'https://jazzyspoon.com/tools/HalloJams/Jazzyspoon%20-%20Noise%20and%20Noir%20-%2002%20Our%20Whispered%20Rants.mp3',
-    //   artist: 'Jazzyspoon',
-    //   duration: 3,
-    // },
-    // {
-    //   title: 'Gone',
-    //   link: 'https://jazzyspoon.com/tools/HalloJams/Jazzyspoon%20&%20IG88%20-%20Jazzyspoon%20&%20IG88%20-%2001%20Gone.mp3',
-    //   artist: 'Jazzyspoon and IG88',
-    //   duration: 3,
-    // },
   ];
 
   ngOnInit(): void {}

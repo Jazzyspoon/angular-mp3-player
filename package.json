@@ -39,7 +39,7 @@
     "socket.io-parser": "^4.2.1",
     "terser": "^5.16.1",
     "tslib": "^2.3.0",
-    "webpack-dev-server": "^4.7.4",
+    "webpack-dev-server": "^5.2.1",
     "zone.js": "~0.15.1"
   },
   "devDependencies": {
