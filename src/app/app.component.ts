@@ -9,5 +9,5 @@ import { Mp3PlayerComponent } from './mp3-player/mp3-player.component';
   imports: [Mp3PlayerComponent],
 })
 export class AppComponent {
-  title = 'Jammin Halloween Player';
+  title = 'Modern MP3 Player';
 }

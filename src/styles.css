@@ -6,5 +6,13 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(circle, #1a2a3a 0%, #0d141d 100%);
+  background-attachment: fixed;
+  color: #e0e6ed;
+}
+h1, h2, h3, .modern-heading {
+  font-family: 'Montserrat', sans-serif;
+  color: #00adb5;
+  letter-spacing: 0.5px;
 }

@@ -1,5 +1,13 @@
-<mat-card class="d-flex flex-row justify-content-center ngx-audio-player z-depth-1 mat-elevation-z2"
-  style="margin: 0px;">
+<mat-card *ngIf="displayTitle" class="ngx-audio-player" style="text-align: center; padding: 20px !important;">
+  <div class="now-playing-title">
+    {{ tracks[currentIndex]?.title }}
+  </div>
+  <div class="now-playing-artist" *ngIf="displayArtist && tracks[currentIndex]?.artist">
+    {{ tracks[currentIndex]?.artist }}
+  </div>
+</mat-card>
+
+<mat-card class="d-flex flex-row justify-content-center ngx-audio-player" style="margin: 0px;">
 
   <audio #audioPlayer [src]="tracks[currentIndex]?.link"></audio>
 
@@ -127,7 +135,7 @@
         class="d-none d-sm-block flex-fill p-1" max="{{duration-endOffset}}" style="width: 100%" (value)="currentTime">
         <input [(ngModel)]='currentTime' (ngModelChange)="currTimePosChanged($event)" matSliderThumb>
       </mat-slider>
-      <div class="py-3 px-1" style="font-size: 12px; text-align: right; color: black">
+      <div class="py-3 px-1" style="font-size: 12px; text-align: right; color: #ff7518">
         <span *ngIf="duration !== 0.01">
           -{{duration-currentTime | secondsToMinutes }}
         </span>
@@ -135,7 +143,7 @@
     </div>
   </div>
   <button (click)='toggleRepeat();' *ngIf="displayRepeatControls" class="p-1 volume justify-content-center" mat-button>
-    <mat-icon *ngIf="repeat === 'none'" aria-hidden="true" class="volume-mute justify-content-center">
+    <mat-icon *ngIf="repeat === 'none'" aria-hidden="true" class="justify-content-center">
       <!-- Repeat None -->
       <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
         <g>
@@ -145,7 +153,6 @@
               d="m8,20l0,1.932a0.5,0.5 0 0 1 -0.82,0.385l-4.12,-3.433a0.5,0.5 0 0 1 0.322,-0.884l14.618,0a2,2 0 0 0 2,-2l0,-8l2,0l0,8a4,4 0 0 1 -4,4l-10,0zm8,-16l0,-1.932a0.5,0.5 0 0 1 0.82,-0.385l4.12,3.433a0.5,0.5 0 0 1 -0.321,0.884l-14.619,0a2,2 0 0 0 -2,2l0,8l-2,0l0,-8a4,4 0 0 1 4,-4l10,0z" />
             <path d="M 3 0 L 22.4164 22.2706 L 21 24 L 1.5836 1.8128 L 3 0"></path>
           </g>
-          <!-- <line xmlns="http://www.w3.org/2000/svg" id="svg_4" y2="22.27056" x2="22.41638" y1="1.81276" x1="1.58362" stroke-width="2" fill="none"/> -->
         </g>
       </svg>
     </mat-icon>
@@ -188,19 +195,6 @@
       </svg>
     </mat-icon>
   </button>
-</mat-card>
-
-<mat-card *ngIf="displayTitle" class="mat-elevation-z1 ngx-audio-player">
-  <div style="text-align: center; color:black; font-size: large; font-weight: bold; height: 50px;">
-    <div style="margin: 1px 2px; padding: 1em">
-      <span *ngIf="!isPlaying">{{ tracks[currentIndex]?.title }}{{ displayArtist && tracks[currentIndex]?.artist ?
-        ' | ' + tracks[currentIndex]?.artist : ''}}</span>
-      <marquee *ngIf="isPlaying" behavior="scroll" direction="left">{{ tracks[currentIndex]?.title
-        }}{{ displayArtist && tracks[currentIndex]?.artist ? ' | ' + tracks[currentIndex]?.artist : ''}}
-      </marquee>
-    </div>
-    <div class="clear"></div>
-  </div>
 </mat-card>
 
 <mat-accordion class="ngx-audio-player" *ngIf="displayPlaylist && tracks.length > 1">
