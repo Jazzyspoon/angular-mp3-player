@@ -16,8 +16,8 @@ import { mockPlaylist } from './model/track.model.mock';
 import { ElementRef, Injectable, Component, Type } from '@angular/core';
 import { Track } from './model/track.model';
 import { MatIconModule } from '@angular/material/icon';
-import { AudioPlayerModule } from './audio-player.module';
 import { By } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Injectable()
 export class MockElementRef {
@@ -44,9 +44,11 @@ describe('AudioPlayerComponent', () => {
         MatPaginatorModule,
         MatTableModule,
         FormsModule,
-        AudioPlayerModule,
+        AudioPlayerComponent,
+        SecondsToMinutesPipe,
+        BrowserAnimationsModule,
       ],
-      declarations: [componentType, ...extraDeclarations],
+      declarations: [...extraDeclarations],
       providers: [
         { provide: ElementRef, useClass: MockElementRef },
         { provide: AudioPlayerService, useClass: MockService },
@@ -71,8 +73,14 @@ describe('AudioPlayerComponent', () => {
       ];
 
       TestBed.configureTestingModule({
-        declarations: [AudioPlayerComponent, SecondsToMinutesPipe],
-        imports: [MatIconModule, FormsModule, MATERIAL_MODULES],
+        imports: [
+          AudioPlayerComponent,
+          SecondsToMinutesPipe,
+          MatIconModule,
+          FormsModule,
+          MATERIAL_MODULES,
+          BrowserAnimationsModule,
+        ],
         providers: [
           { provide: ElementRef, useClass: MockElementRef },
           { provide: AudioPlayerService, useClass: MockService },

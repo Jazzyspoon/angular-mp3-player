@@ -10,15 +10,37 @@ import {
 } from '@angular/core';
 import { Track } from './model/track.model';
 import { MatSliderModule } from '@angular/material/slider';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { AudioPlayerService } from './service/audio-player.service';
 import { Subject } from 'rxjs';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { SecondsToMinutesPipe } from './pipe/seconds-to-minutes';
 
 @Component({
   selector: 'mat-advanced-audio-player,audio-player',
   templateUrl: 'audio-player.component.html',
   styleUrls: ['audio-player.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatSliderModule,
+    MatExpansionModule,
+    MatPaginatorModule,
+    MatIconModule,
+    SecondsToMinutesPipe,
+  ],
 })
 export class AudioPlayerComponent implements OnInit, OnChanges {
   audioPlayerService: AudioPlayerService;
@@ -156,7 +178,11 @@ export class AudioPlayerComponent implements OnInit, OnChanges {
     }
 
     setTimeout(() => {
-      this.player.nativeElement.play();
+      this.player.nativeElement.play().catch((err: any) => {
+        if (err.name !== 'NotAllowedError') {
+          console.error('Playback error:', err);
+        }
+      });
     }, 50);
   }
 

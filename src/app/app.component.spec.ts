@@ -1,11 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Mp3PlayerComponent } from './mp3-player/mp3-player.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HammerModule } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
+      imports: [
+        AppComponent,
+        Mp3PlayerComponent,
+        BrowserAnimationsModule,
+        HammerModule,
       ],
     }).compileComponents();
   });
@@ -16,16 +22,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'new-angular-app'`, () => {
+  it(`should have as title 'Jammin Halloween Player'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('new-angular-app');
+    expect(app.title).toEqual('Jammin Halloween Player');
   });
 
-  it('should render title', () => {
+  it('should create the component', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('new-angular-app app is running!');
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
 });

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Mp3PlayerComponent } from './mp3-player.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HammerModule } from '@angular/platform-browser';
 
 describe('Mp3PlayerComponent', () => {
   let component: Mp3PlayerComponent;
@@ -8,7 +9,7 @@ describe('Mp3PlayerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Mp3PlayerComponent],
+      imports: [Mp3PlayerComponent, BrowserAnimationsModule, HammerModule],
     }).compileComponents();
   });
 

@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Track } from '../audio-player/model/track.model';
+import { AudioPlayerComponent } from '../audio-player/audio-player.component';
+
 @Component({
   selector: 'app-mp3-player',
   templateUrl: './mp3-player.component.html',
   styleUrls: ['./mp3-player.component.css'],
+  standalone: true,
+  imports: [AudioPlayerComponent],
 })
 export class Mp3PlayerComponent implements OnInit {
   constructor() {}

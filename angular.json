@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "new-angular-app:build:production"
+              "buildTarget": "new-angular-app:build:production"
             },
             "development": {
-              "browserTarget": "new-angular-app:build:development"
+              "buildTarget": "new-angular-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,14 +74,13 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "new-angular-app:build"
+            "buildTarget": "new-angular-app:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": ["src/favicon.ico", "src/assets"],

@@ -3,7 +3,10 @@ import { Pipe, PipeTransform } from '@angular/core';
  * Transform seconds to minutes:seconds
  * Example : 270 -> 02:30
  */
-@Pipe({ name: 'secondsToMinutes' })
+@Pipe({
+  name: 'secondsToMinutes',
+  standalone: true,
+})
 export class SecondsToMinutesPipe implements PipeTransform {
   transform(time: number): string {
     const hours = ('0' + Math.floor(time / 3600)).slice(-2);
