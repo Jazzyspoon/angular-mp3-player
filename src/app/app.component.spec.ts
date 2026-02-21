@@ -22,10 +22,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Jammin Halloween Player'`, () => {
+  it(`should have as title 'Modern MP3 Player'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Jammin Halloween Player');
+    expect(app.title).toEqual('Modern MP3 Player');
   });
 
   it('should create the component', () => {
