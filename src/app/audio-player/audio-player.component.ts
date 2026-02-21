@@ -45,7 +45,7 @@ import { SecondsToMinutesPipe } from './pipe/seconds-to-minutes';
 export class AudioPlayerComponent implements OnInit, OnChanges {
   audioPlayerService: AudioPlayerService;
   repeat: string = 'all';
-  constructor(elem: ElementRef) {
+  constructor(elem: ElementRef, private aps: AudioPlayerService) {
     if (
       elem.nativeElement.tagName.toLowerCase() === 'mat-advanced-audio-player'
     ) {
@@ -53,7 +53,7 @@ export class AudioPlayerComponent implements OnInit, OnChanges {
         `'mat-advanced-audio-player' selector is deprecated; use 'ngx-audio-player' instead.`
       );
     }
-    this.audioPlayerService = new AudioPlayerService();
+    this.audioPlayerService = aps;
   }
 
   @Input()
