@@ -24,12 +24,6 @@ export class Mp3PlayerComponent implements OnInit {
   msaapPlaylist: Track[] = [
     // Material Style Advance Audio Player Playlist
     {
-      title: 'Clarity (Did It Last Cover)',
-      link: 'assets/tracks/Clarity (Did It Last Cover).mp3',
-      artist: 'From Noise to Water',
-      duration: 5,
-    },
-    {
       title: 'Nothing New (Young Upstart Cover)',
       link: 'assets/tracks/Nothing New (Young Upstart Cover).mp3',
       artist: 'From Noise to Water',
@@ -44,18 +38,6 @@ export class Mp3PlayerComponent implements OnInit {
     {
       title: 'Take Me With You (Drama Queen Cover)',
       link: 'assets/tracks/Take Me With You (Drama Queen Cover).mp3',
-      artist: 'From Noise to Water',
-      duration: 5,
-    },
-    {
-      title: 'Timing Is Everything Else (Glass Feet Cover)',
-      link: 'assets/tracks/Timing Is Everything Else (Glass Feet Cover).mp3',
-      artist: 'From Noise to Water',
-      duration: 5,
-    },
-    {
-      title: 'Trying To Be (The Quiet Storm Cover)',
-      link: 'assets/tracks/Trying To Be (The Quiet Storm Cover).mp3',
       artist: 'From Noise to Water',
       duration: 5,
     },
