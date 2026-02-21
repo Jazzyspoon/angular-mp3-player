@@ -93,7 +93,10 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "dir": "dist/new-angular-app",
+            "no-silent": true
+          }
         }
       }
     }
